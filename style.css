@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+
+*{
+    font-family: Mulish;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F8FAFC;
+    justify-content: center;
+    background-image: url(./Background\ Pattern.svg);
+    background-repeat: no-repeat;
+    background-size:auto;
+    background-position: bottom;
+    
+}
+.form-box{
+    margin: 10px;
+    padding-inline: 50px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.05);
+}
+h5{
+    color: rgba(117, 117, 117, 1);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+h3{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+label{
+    font-family: Mulish;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+input{
+    margin-block: 5px;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid rgba(222, 222, 222, 1)
+}
+.error-text{
+    font-family: Mulish;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgba(98, 91, 247, 1);
+    display: none;
+}
+.continue-btn{
+    margin-block: 10px;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    background-image: linear-gradient(180deg, #625BF7 0%, #463EEA 100%);
+    color: white;
+    padding: 9px;
+    font-weight: 800;
+
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 18px;
+}
+.continue-btn:hover{
+    cursor: pointer;
+}
