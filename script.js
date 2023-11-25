@@ -1,6 +1,9 @@
 const signupForm = document.querySelector(".signup-form");
 const submitBtn = document.querySelector(".continue-btn");
 
+if(localStorage.getItem('userData') !== null){
+    window.location.href = 'profile.html';
+}
 const errortext = document.querySelector(".error-text");
 submitBtn.addEventListener('click',(e)=>{
     e.preventDefault();
@@ -10,7 +13,6 @@ submitBtn.addEventListener('click',(e)=>{
     const confirmPass = document.getElementById("confirmPass").value;
 
     const isSuccess = performSignup(fullname, email, password);
-    console.log(isSuccess);
     if(isSuccess){
         setTimeout(function () {
             window.location.href = 'profile.html';
@@ -26,11 +28,14 @@ function performSignup(username, userEmail,userPassword){
     if(username.length == 0 || userEmail.length == 0 || userPassword.length == 0){
         return false;
     }
-    const user = {username,userEmail,userPassword};
-    
-    const uuid = crypto.randomUUID();
-
-    localStorage.setItem(uuid,JSON.stringify(user));
+    const token = crypto.randomUUID();
+    let userData = {
+        name:username,
+        email:userEmail,
+        password:userPassword,
+        token:token
+    }    
+    localStorage.setItem(token,JSON.stringify(userData));
 
     return true;
 }
