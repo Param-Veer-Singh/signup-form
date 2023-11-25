@@ -16,7 +16,7 @@ submitBtn.addEventListener('click',(e)=>{
     if(isSuccess){
         setTimeout(function () {
             window.location.href = 'profile.html';
-        }, 2000);
+        }, 500);
     }else{
         errortext.style.display = "block";
     }

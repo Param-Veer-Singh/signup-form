@@ -10,13 +10,16 @@
     align-items: center;
     background-color: #F8FAFC;
     justify-content: center;
-    background-image: url(./Background\ Pattern.svg);
+    background-image: url(./Background\ Pattern\ \(1\).svg);
     background-repeat: no-repeat;
     background-size:auto;
     background-position: bottom;
     
 }
 .profile-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 10px;
     padding-inline: 50px;
     background-color: white;
@@ -47,4 +50,17 @@ h3{
 }
 .logout-btn:hover{
     cursor: pointer;
+}
+.signup-text{
+    font-family: Mulish;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgba(98, 91, 247, 1);
+}
+.profile-img{
+    display: flex;
+    flex-direction: column;
 }
