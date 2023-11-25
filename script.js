@@ -1,7 +1,7 @@
 const signupForm = document.querySelector(".signup-form");
 const submitBtn = document.querySelector(".continue-btn");
 
-if(localStorage.getItem('userData') !== null){
+if(localStorage.getItem('token') !== null){
     window.location.href = 'profile.html';
 }
 const errortext = document.querySelector(".error-text");
@@ -35,7 +35,7 @@ function performSignup(username, userEmail,userPassword){
         password:userPassword,
         token:token
     }    
-    localStorage.setItem(token,JSON.stringify(userData));
+    localStorage.setItem('token',JSON.stringify(userData));
 
     return true;
 }

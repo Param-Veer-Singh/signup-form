@@ -1,8 +1,8 @@
 let userData = {};
-if (!localStorage.getItem("userData")) {
+if (!localStorage.getItem('token')) {
   window.location.href = 'index.html';
 }
-userData = JSON.parse(localStorage.getItem("userData"));
+userData = JSON.parse(localStorage.getItem("token"));
 const userInfo = document.querySelector(".info");
 userInfo.innerHTML = `
     <p>Full Name: ${userData.name}</p>
@@ -11,6 +11,6 @@ userInfo.innerHTML = `
     <p>Password: ${userData.password}</p>
 `;
 document.querySelector(".logout-btn").addEventListener("click",()=>{
-    localStorage.removeItem('userData');
+    localStorage.removeItem('token');
     window.location.href = "index.html";
 });
